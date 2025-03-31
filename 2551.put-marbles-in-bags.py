@@ -12,29 +12,19 @@ class Solution:
         #We need to partition the list of weights into k partitions 
         #Only the end points of each subarray affects the score 
         #Weights should be positive, 
-        #WE should be able to find the minimum simply by negating each weight and looking for the maximum 
-        @cache
-        def getMaximumScore(start, k):
-            #We need to consider the len(weights) choose k-1 possible split points
-            #it might be possible to discard a lot of them directly 
-            #Can we do it greedily?
-            #print(weights, k)
-            if k == 1:
-                return weights[start] + weights[-1]
-            
-            best_score = float("-inf")
-            for split_point in range(start, len(weights)-k + 1):
-                cur_score = weights[start] + weights[split_point] + getMaximumScore(split_point+1, k-1)
-                #print(weights, split_point, cur_score)
-                best_score = max(best_score, cur_score)
-            return best_score
-        highest = getMaximumScore(0, k)
-        weights = [-w for w in weights]
-        getMaximumScore.cache_clear()
-        lowest = -getMaximumScore(0, k)
-        #print(highest, lowest, highest - lowest)
+        if k == 1:
+            #only one partition, min and max will be equal
+            return 0
         
-        return highest - lowest
+        pair_sums = [weights[i] + weights[i+1] for i in range(len(weights)-1)]
+        
+        pair_sums.sort()
+        
+        best = sum(pair_sums[-(k-1):])
+        
+        worst = sum(pair_sums[:k-1])
+        #print(best, worst, pair_sums)
+        return best - worst
          
 # @lc code=end
 
