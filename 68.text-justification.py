@@ -22,7 +22,7 @@ def full_justify_line(words, width, num_chars=None):
     the padding is apllied as evenly as possible between the words.
     i.e. no two gaps between words ever differ by more than 1
     """
-    if not None:
+    if num_chars is None:
         #optionallly you can supply the total number of chars in the words
         #if not supplied wi simply compute them
         num_chars = sum(map(len, words))
@@ -49,7 +49,7 @@ class Solution:
             cur_word = words.pop()
             word_len = len(cur_word)
             #The current word can't fit into this line
-            if num_chars + required_spaces(cur_line) + word_len >= maxWidth :
+            if num_chars + required_spaces(cur_line) + word_len > maxWidth :
                 #We have to start a new line 
                 #First add the curent line to the result, don't add empty lines
                 if len(cur_line) == 1:
@@ -61,16 +61,11 @@ class Solution:
                 cur_line.clear()
                 num_chars = 0
             
-            if word_len == maxWidth:
-                result.append(cur_word)
-                num_chars = 0
-                continue
-
             cur_line.append(cur_word)
             num_chars += word_len
     
     
-        if len(cur_line) > 0:
+        if cur_line:
             result.append(left_justify_line(cur_line, maxWidth))
         return result
         
