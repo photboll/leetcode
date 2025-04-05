@@ -17,13 +17,15 @@ class Solution:
             left = i +1
             right = n-1
             while left < right:
-                if nums[left] == nums[left-1] or (right < n-1 and nums[right] == nums[right+1]):
-                    continue
                 cur_sum = nums[left] + nums[right]
                 if cur_sum == target:
                     result.append((nums[i], nums[left], nums[right]))
                     left += 1
                     right -= 1
+                    while left < right and nums[left] == nums[left-1]:
+                        left +=1
+                    while left < right and nums[right] == nums[right+1]:
+                        right -=1
                 elif cur_sum < target:
                     left += 1
                 else:
