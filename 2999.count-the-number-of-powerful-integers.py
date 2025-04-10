@@ -5,6 +5,34 @@
 #
 
 # @lc code=start
+
+class Solution:
+    def numberOfPowerfulInt(self, start, finish, limit, s):
+        def noramlize(N):
+            ans = 0
+            less = False #Wheter the converted number is less than N
+            for n in map(int, str(N)):
+                if less:
+                    ans = ans * 10 + limit
+                elif n > limit:
+                    less = True
+                    ans = ans * 10 + limit
+                else:
+                    ans = ans * 10 + n
+            return ans
+        
+        def count(N):
+            ans = 0
+            base = limit + 1
+            prefix = str(N)[:-len(s)]
+            for n in prefix:
+                ans = ans * base + int(n)
+            if int(prefix + s) <= N:
+                ans += 1
+            return ans
+
+        return count(noramlize(finish)) - count(noramlize(start-1))
+
 def numberOfpowerfulIntLessThan(finish: int, limit: int, s:str) -> int:
     """
     We need to know what is the limiting factor of each possbile position.
@@ -17,15 +45,29 @@ def numberOfpowerfulIntLessThan(finish: int, limit: int, s:str) -> int:
     
     """
     fin = str(finish)
-    result = (finish <= int(s))#is the suffix itself in the range
-    choices = 1
-    msb_passed = False
-    for i in range(len(fin)- len(s)):
-        print(i, fin[i], limit)
+    n = len(fin)
+    suffixLen = len(s)
+    prefixLen = n - suffixLen
+    if prefixLen < 0:
+        return 0 #Suffix won't fit 
+    dp = [[0,0] for _ in range(prefixLen+ 1)]#dp[i][tight]
+    dp[0][1] = 1 #The empty prefix is tight with fin 
+    for i in range(prefixLen):
+        for tight in [0, 1]:
+            max_digit = int(fin[i]) if tight else limit
+            for d in range(0, min(max_digit, limit)+1):
+                next_tight = tight and (d == max_digit)
+                dp[i+1][next_tight] += dp[i][tight]
     
-    return result
+    total = dp[prefixLen][0] + dp[prefixLen][1]
+    #check if the final number is actually inside the interval
+    #Only one tight prefix path exists and we overshot the finish line
+    if dp[prefixLen][1] == 1 and int(fin[:prefixLen] + s) > finish:
+        total -= 1
+        
+    return total
 
-class Solution:
+class SolutionV1:
     def numberOfPowerfulInt(self, start: int, finish: int, limit: int, s: str) -> int:
         """
         The main idea is to start with the suffix and then prepend all available digits (those at mort equal to  limit )
