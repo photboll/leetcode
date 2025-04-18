@@ -121,8 +121,43 @@ class Node:
         self.bottomRight = bottomRight
 """
 
+def check_grid(grid, i_start, i_end, j_start, j_end):
+    """
+    Checks if the grid only contains identical values, either 1 or 0
+    returns (True, value) if grid is entirely filled with value 
+    returns (False, 0) ohterwise, if it contains a mix of values
+    """
+    
+    for i in range(i_start, i_end):
+        for j in range(j_start, j_end):
+            if grid[i][j] != grid[i_start][j_start]:
+                return False, 0
+    return True, grid[i_start][j_start] 
+    
 class Solution:
     def construct(self, grid: List[List[int]]) -> 'Node':
+        m = len(grid)
+        n = len(grid[0])
+        
+        def recur(i_start, i_end, j_start, j_end):
+            if i_end - i_start == 1:
+                return Node(grid[i_start][j_start], True, None, None, None, None)
+            
+            is_leaf, curr_val = check_grid(grid, i_start, i_end, j_start, j_end)
+            if is_leaf: 
+                return Node(curr_val, is_leaf, None, None, None, None)  
+            else:
+                i_mid = (i_start + i_end) // 2
+                j_mid = (j_start + j_end) // 2
+                topLeft = recur(i_start, i_mid, j_start, j_mid)
+                topRight = recur(i_start, i_mid, j_mid, j_end)
+                bottomLeft = recur(i_mid, i_end, j_start, j_mid)
+                bottomRight = recur(i_mid, i_end, j_mid, j_end) 
+                return Node(curr_val, is_leaf, topLeft, topRight, bottomLeft, bottomRight) 
+        
+    
+        return recur(0, m, 0, n)
+            
         
 # @lc code=end
 
