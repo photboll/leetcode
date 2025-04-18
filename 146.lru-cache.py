@@ -11,8 +11,7 @@
 # Dislikes: 1121
 # Total Accepted:    2M
 # Total Submissions: 4.6M
-# Testcase Example:  '["LRUCache","put","put","get","put","get","put","get","get","get"]\n' +
-  '[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]'
+# Testcase Example:  '["LRUCache","put","put","get","put","get","put","get","get","get"]\n' +'[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]'
 #
 # Design a data structure that follows the constraints of a Least Recently Used
 # (LRU) cache.
@@ -67,17 +66,78 @@
 #
 
 # @lc code=start
+class ListNode:
+    def __init__(self,key, val, next=None, prev=None):
+        self.key = key
+        self.val = val
+        self.next = next
+        self.prev = prev
+    def __repr__(self):
+        return f"{self.key} = {self.val}"
+
 class LRUCache:
-
     def __init__(self, capacity: int):
+      self.capacity = capacity
+      self.cache = {}
+      self.tail = ListNode(-1, -1)
+      self.head = ListNode(-1, -1)
+      self.head.next = self.tail
+      self.tail.prev = self.head
+      
+    def append(self, node: ListNode):
+        """
+        Appends the node the the front of the list, most recently used position
+        """
+        next_node = self.head.next
+        self.head.next = node
+        node.prev = self.head
+        node.next = next_node
+        next_node.prev = node
+    
+    def remove(self, node: ListNode):
+        """
+        Removes a node from the doulby linked list 
+        """
+        prev_node = node.prev
+        next_node = node.next
+        prev_node.next = next_node
+        next_node.prev = prev_node
+        #Orphan the current node 
+        node.next = None
+        node.prev = None
         
-
+      
     def get(self, key: int) -> int:
-        
+        #print("Getting", key)
+        if key not in self.cache:
+          return -1
 
+        node = self.cache[key]
+        #Mark the key as used recently, by simply removing it and adding it at the head 
+        self.remove(node)
+        self.append(node)
+        return node.val
+    
     def put(self, key: int, value: int) -> None:
+        #print("Putting", key, value)
+        if key in self.cache:
+           node = self.cache[key]
+           self.remove(node)
+           del self.cache[key]
+        #Evict node if needed 
+        if len(self.cache) >= self.capacity:
+            lru_node = self.tail.prev #Find the LRU
+            self.remove(lru_node)
+            del self.cache[lru_node.key] #Remove it from the cache
+            
+             
+        #add the key, value pair to the cache and update lru list
+        new_node = ListNode(key, value)
+        self.cache[key] = new_node 
+        self.append(new_node)
+        #print(self.cache)
         
-
+        
 
 # Your LRUCache object will be instantiated and called as such:
 # obj = LRUCache(capacity)
