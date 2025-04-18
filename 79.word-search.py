@@ -63,25 +63,60 @@
 #
 
 # @lc code=start
+from collections import deque, Counter
 DIRECTIONS = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 def within_bounds(m, n, i, j):
     return 0 <= i < m and 0 <= j < n
 
+def should_reverse(board, word):
+    """
+    if the count of the final char is smaller than the first letter, we should process it in reverse
+    to prune the search tree
+    """
+    flattened = []
+    for row in board:
+        flattened.extend(row)
+    counts = Counter(flattened)
+    return counts[word[0]] > counts[word[-1]]
+
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
+        """
+        Replaing the queue with a priority queue with th priority on th highest word_index would improve the 
+        average runtime but when the word is present. knowing that the word is missing would still require to check the same amount of 
+        nodes
+        """
         m = len(board)
         n = len(board[0])
         len_word = len(word)
-        #Check each possible location for the starting character 
-        #When we find one, we can start looking for the second char and so on
+        if should_reverse(board, word):
+            word = word[::-1]
+            
+        #Visited set is used to prevent self intersections, i.e. using the same position on the board for two different positions on the board 
+        queue = deque()#(i, j, word_index_to_match, visited_set)
+        for i in range(m):
+            for j in range(n):
+                if board[i][j] == word[0]:
+                    queue.append((i, j, 1, set([(i, j)])))
+                 
         
-        def backtrack(i, visited):
-            if i ==len_word :
+        while queue :
+            i, j, word_index, visited = queue.popleft()
+            if word_index == len_word:
+                #we have just traversed the whole word we are searching for
+                #So it must exist in the board 
                 return True
-        
+            #Check if any of the neighoboring cells contain the desired char  
+            #In which case we add that position to the queue
             for di, dj in DIRECTIONS:
-                pass        
-        return 
-        
+                ni, nj = i + di, j+dj
+                if (within_bounds(m, n, ni, nj)
+                    and board[ni][nj] == word[word_index]
+                    and(ni, nj) not in visited):
+                    visited_copy = visited.copy()
+                    visited_copy.add((ni, nj))
+                    queue.append((ni, nj, word_index + 1, visited_copy))
+                    
+        return False
 # @lc code=end
 
