@@ -6,7 +6,7 @@
 
 # @lc code=start
 from bisect import bisect_left
-from collections import defaultdict
+from collections import defaultdict, Counter
 def canReorderIntoPairs(arr, pairing_func= lambda x: 2*x):
         n = len(arr)
         used = [False] * n
@@ -38,7 +38,7 @@ def canReorderIntoPairs(arr, pairing_func= lambda x: 2*x):
 
         return True
             
-class Solution:
+class SolutionV1:
     def canReorderDoubled(self, arr: List[int]) -> bool:
         """
         Can we greedily remove any arbitrary pair that satisies the condition?
@@ -63,7 +63,19 @@ class Solution:
 
         return canReorderIntoPairs(neg_arr[::-1]) and canReorderIntoPairs(pos_arr)
         
-                
+class Solution:
+    def canReorderDoubled(self, arr: List[int]) -> bool:
+        def canReorderPairs(arr, pair_func= lambda x: 2*x):
+            counts = Counter(arr)
+            for num in sorted(arr, key=abs):
+                if counts[num] == 0:
+                    continue
+                counts[pair_func(num)] -= counts[num]
+                if counts[pair_func(num)] < 0:
+                    return False
+                counts[num] = 0
+            return True
+        return canReorderPairs(arr)
         
         
 # @lc code=end
