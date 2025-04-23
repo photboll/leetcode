@@ -57,45 +57,21 @@
 # @lc code=start
 DIRECTIONS = [(0,1), (0, -1), (1, 0), (-1, 0)]
 class TrieNode:
-    def __init__(self, char=""):
-        self.children = [None for _ in range(26)]
-        self.is_terminal = False
-        self.value = char
+    def __init__(self):
+        self.children = {}
+        self.word = None
 class Trie:
     def __init__(self):
         self.root = TrieNode()
 
-    def insert(self, key):
+    def insert(self, word):
         curr_node = self.root
-        for char in key:
-            char_i = ord(char) - ord("a")
-            #Does a node exist for the current character
-            if curr_node.children[char_i] == None:
-                curr_node.children[char_i] = TrieNode(char=char)
-        
+        for char in word:
+            if char not in curr_node.children:
+                curr_node.children[char] = TrieNode()
             #move curr node forward to the new node
-            curr_node = curr_node.children[char_i]
-        curr_node.is_terminal = True
-    
-    def prefix_exists(self, prefix):
-        curr_node = self.root
-        for char in prefix:
-            char_i = ord(char) - ord("a")
-            if curr_node.children[char_i] is None:
-                return False
-            curr_node = curr_node.children[char_i]
-            
-        return True
-    
-    def search(self, key):
-        curr_node = self.root
-        for char in key:
-            char_i = ord(char) - ord("a")
-            if curr_node.children[char_i] is None:
-                return False
-            curr_node = curr_node.children[char_i]
-        
-        return curr_node.is_terminal
+            curr_node = curr_node.children[char]
+        curr_node.word = word
             
         
                 
@@ -109,85 +85,38 @@ class Solution:
         
         """
         trie = Trie()
+        for word in words:
+            trie.insert(word)
+        
         m = len(board)
         n = len(board[0])
-        visited = [[False for _ in range(n)] for _ in range(m)]
-        curr_word = []
+        result = []
+        visited = [[False] * n for _ in range(m)]
         
-        def backtrack(i, j):
-            if len(curr_word) > 10:
-                #words[i].length is constrain to be <= 10, so no need to consider any longer words
+        def dfs(i, j, curr_node):
+            char = board[i][j]
+
+            if char not in curr_node.children:
                 return 
-            trie.insert("".join(curr_word))
             
+            next_node = curr_node.children[char]
+            if next_node.word:
+                result.append(next_node.word)
+                next_node.word = None#Prune to skip adding the same word multiple times 
+            
+            visited[i][j] = True
             for di, dj in DIRECTIONS:
                 ni, nj = i + di, j+dj
-                if not within_bounds(m, n, ni, nj) or visited[ni][nj]:
-                    continue
-                
-                #Mark the next node as visited and append it to the current word
-                visited[ni][nj] = True
-                curr_word.append(board[ni][nj])
-                backtrack(ni, nj)
-                #Unmark the visited and remove the current letter
-                curr_word.pop()
-                visited[ni][nj] = False
+                if within_bounds(m, n, ni, nj) and not visited[ni][nj]:
+                    dfs(ni, nj, next_node)
+            #Backtrack
+            visited[i][j] = False
         
-        #The word can begin at any position 
-        for i in range(m):
-            for j in range(n):
-                curr_word.append(board[i][j])
-                visited[i][j] = True
-                backtrack(i, j)
-                curr_word.pop()
-                visited[i][j] = False
+        for start_i in range(m):
+            for start_j in range(n):
+                dfs(start_i, start_j, trie.root)
         
-        results = []
-        for word in words:
-            if trie.search(word):
-                results.append(word)
-
-        return results
-            
-                
-                
-
-class SolutionV1:
-    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
-        """
-        We need to populate the trie by adding all non self-intersecting words present in the board to the trie
-        
-        """
-        trie = Trie()
-        queue = deque()# (i, j, word, visited_positions)
-        m = len(board)
-        n = len(board[0])
-        #Words can start at any position in the board
-        for i in range(m):
-            for j in range(n):
-                word = board[i][j]
-                queue.append((i, j, word, set([(i, j)])))
-                trie.insert(word)
-        #print(queue)
-        while queue:
-            i, j, word, visited = queue.popleft()
-            
-            for di, dj in DIRECTIONS:
-                ni, nj = i + di, j + dj
-                if within_bounds(m,n,ni,nj) and (ni, nj) not in visited:
-                    copy_visited = set(visited)
-                    copy_visited.add((ni, nj))
-                    new_word = word + board[ni][nj]
-                    queue.append((ni, nj, new_word, copy_visited))
-                    trie.insert(new_word)
-        
-        result = []
-        for word in words:
-            if trie.search(word):
-                result.append(word)
-        return result                
-            
-            
+        return result    
         
         
 # @lc code=end
