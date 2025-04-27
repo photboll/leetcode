@@ -25,7 +25,7 @@ class Solution:
         
         total_cost = 0
         while k > 0:
-            #print(k, left, right, len(heap), n, print(heap))
+            print(k, left, right, len(heap), n, print(heap))
             cost, _, is_left = heappop(heap)
             total_cost += cost
             k -= 1
