@@ -5,7 +5,6 @@
 #
 
 # @lc code=start
-from collections import deque
 class Solution:
     def maxTargetNodes(self, edges1: List[List[int]], edges2: List[List[int]], k: int) -> List[int]:
         def dfs(node, parent, children, k) -> int:
