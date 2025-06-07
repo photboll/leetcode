@@ -1,0 +1,7 @@
+""aaba*"
+"abc"
+"abc*de*fgh*"
+"a*b*c*d*"
+"abcde*f*"
+"abc*"
+"aaaa***""
