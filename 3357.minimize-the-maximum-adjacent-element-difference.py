@@ -9,6 +9,10 @@ import itertools
 import bisect
 class Solution:
     def minDifference(self, nums: list[int]) -> int:
+        """
+        I was suprised by the fact that exahustively checking all possible entries was good enough with binary search
+        
+        """
         maxPositiveGap = 0
         mn = 1_000_000_000
         mx = 0
