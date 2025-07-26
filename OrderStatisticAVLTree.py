@@ -139,16 +139,16 @@ class TopKTracker:
                 self.root = self.tree.insert(self.root, element)
                 self.root = self.tree.delete(self.root, min_val)
     
-    def get_kth_largest(self, k):
+    def get_ith_largest(self, i):
         """
-        Returns the k-th largest element (1-indexed) in O(log K) time
+        Returns the i-th largest element (1-indexed) in O(log k) time
         
         """
         current_size = self.get_size()
-        if not (1<= k <= current_size):
-            raise IndexError(f"{k=} is out of bounds. {current_size=}")
+        if not (1<= i <= current_size):
+            raise IndexError(f"{i=} is out of bounds. {current_size=}")
         
-        return self.tree.select(self.root, current_size-k + 1)
+        return self.tree.select(self.root, current_size-i + 1)
         
         
     
