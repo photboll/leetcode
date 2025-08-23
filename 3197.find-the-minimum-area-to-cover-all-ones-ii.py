@@ -79,25 +79,109 @@ class Solution:
                     return covered_area
             
             res = float("inf")
-            for vsplit in range(1, len(grid)):
-                top, bot = vsplit_grid(grid, vsplit)
-                #We can only split top or bottom (in this problem)
-                split_top = recur_split(top, num_splits-1) + recur_split(bot, num_splits-2)
-                split_bot = recur_split(top, num_splits-2) + recur_split(bot, num_splits-1)
+            for cuts_in_first in range(num_splits):
+                cuts_in_second = (num_splits -1) - cuts_in_first
 
-                res = min(res, split_bot, split_top)
+                for vsplit in range(1, len(grid)):
+                    top, bot = vsplit_grid(grid, vsplit)
+                    area = recur_split(top, cuts_in_first) + recur_split(bot, cuts_in_second)
+
+                    res = min(res, area)
+                    
                 
-            
-            for hsplit in range(1, len(grid[0])):
-                left, right = hsplit_grid(grid, hsplit)
-                split_left = recur_split(left, num_splits-1) + recur_split(right, num_splits-2)
-                split_right = recur_split(left, num_splits-2) + recur_split(right, num_splits-1)
-                res = min(res, split_left, split_right)
+                for hsplit in range(1, len(grid[0])):
+                    left, right = hsplit_grid(grid, hsplit)
+                    area = recur_split(left, cuts_in_first) + recur_split(right, cuts_in_second)
+                    res = min(res, area)
             
             return res
             
         
         return recur_split(grid, num_splits=2)
+
+
+import numpy as np
+from typing import List, Dict, Tuple
+
+class SolutionNP:
+    def minimumSum(self, grid: List[List[int]]) -> int:
+        """
+        Calculates the minimum sum of areas of 3 non-overlapping rectangles
+        that cover all the '1's in the grid.
+
+        This implementation uses a general-purpose, memoized recursion that
+        can be extended to solve for N rectangles by changing the initial
+        number of cuts.
+        
+        For 3 rectangles, we need 2 cuts.
+        """
+        # Convert the input grid to a NumPy array for efficient view-based slicing.
+        self.grid = np.array(grid, dtype=np.int8)
+        
+        # Memoization cache to store results of subproblems.
+        # Key: (r, c, h, w, k) -> top-left corner, dimensions, and cuts remaining.
+        # Value: The minimum area sum for that subproblem.
+        self.memo: Dict[Tuple[int, int, int, int, int], int] = {}
+
+        h, w = self.grid.shape
+        
+        # To get 3 rectangles, we need to make 2 cuts.
+        num_cuts = 2
+        
+        return self._solve(0, 0, h, w, num_cuts)
+
+    def _get_bounding_box_area(self, r: int, c: int, h: int, w: int) -> int:
+        """
+        Calculates the area of the minimal bounding box for 1s within a
+        sub-grid defined by its coordinates and dimensions.
+        This is the base case for the recursion (when k=0 cuts remain).
+        """
+        # Create a view of the sub-grid without copying data.
+        sub_grid = self.grid[r:r+h, c:c+w]
+        
+        # Find the coordinates of all '1's within this view.
+        rows, cols = np.where(sub_grid == 1)
+
+        # If there are no '1's, this partition is invalid. Return infinity
+        # to ensure it's never chosen as a minimum.
+        if len(rows) == 0:
+            return float('inf')
+
+        # Calculate the area of the bounding box.
+        height = rows.max() - rows.min() + 1
+        width = cols.max() - cols.min() + 1
+        
+        return height * width
+
+    def _solve(self, r: int, c: int, h: int, w: int, k: int) -> int:
+        if k == 0:
+            return self._get_bounding_box_area(r, c, h, w)
+        
+        memo_key = (r, c, h, w, k)
+        if memo_key in self.memo:
+            return self.memo[memo_key]
+
+        min_total_area = float('inf')
+
+        # Distribute the remaining k-1 cuts after this first cut.
+        # cuts_in_first can range from 0 to k-1.
+        for cuts_in_first in range(k):
+            cuts_in_second = (k - 1) - cuts_in_first
+
+            # Try horizontal cuts
+            for i in range(1, h):
+                area = (self._solve(r, c, i, w, cuts_in_first) + 
+                        self._solve(r + i, c, h - i, w, cuts_in_second))
+                min_total_area = min(min_total_area, area)
+
+            # Try vertical cuts
+            for j in range(1, w):
+                area = (self._solve(r, c, h, j, cuts_in_first) + 
+                        self._solve(r, c + j, h, w - j, cuts_in_second))
+                min_total_area = min(min_total_area, area)
+        
+        self.memo[memo_key] = min_total_area
+        return min_total_area
             
         
         
