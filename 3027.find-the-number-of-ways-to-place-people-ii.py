@@ -1,7 +1,7 @@
 #
-# @lc app=leetcode id=3025 lang=python3
+# @lc app=leetcode id=3027 lang=python3
 #
-# [3025] Find the Number of Ways to Place People I
+# [3027] Find the Number of Ways to Place People II
 #
 
 # @lc code=start
@@ -13,7 +13,6 @@ class Solution:
         """
         n = len(points)
         points.sort(key=lambda p: (-p[0], p[1]))
-        print(points)
         total = 0
         #The lower left corner of our rectangle
         for i in range(n-1):
@@ -30,10 +29,5 @@ class Solution:
 
         return total   
 
-                
-
-                
-        
-        
 # @lc code=end
 
