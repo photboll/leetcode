@@ -8,6 +8,29 @@
 from itertools import combinations
 class Solution:
     def triangleNumber(self, nums):
+        nums.sort()
+        n = len(nums)
+        total = 0
+        
+        for k in range(n-1, 1, -1):
+            #nums[k] = c
+            #nums[r] = b
+            #nums[l] = a
+            # since nums is sorted a <= b <= c
+            l, r = 0, k-1
+            while l < r:
+                if nums[l] + nums[r
+                                  ] > nums[k]:
+                    #then all pairs in (i,..., j) are valid
+                    total += r -l 
+                    r -= 1
+                else:
+                    #We need to make a + b larger
+                    # b already at max, can only increase a
+                    l += 1 
+        return total 
+class SolutionBS:
+    def triangleNumber(self, nums):
         def bs(a, b, start_i):
             lb = start_i
             ub = n
