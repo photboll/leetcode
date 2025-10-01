@@ -5,6 +5,10 @@
 #
 
 # @lc code=start
+class SolutionO1:
+    def numWaterBottles(sefl, numBottles, numExchange):
+        return numBottles + (numBottles -1) // (numExchange -1)
+        
 class Solution:
     def numWaterBottles(self, numBottles: int, numExchange: int) -> int:
         total = 0
