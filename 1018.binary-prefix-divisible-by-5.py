@@ -8,6 +8,14 @@
 class Solution:
     def prefixesDivBy5(self, nums: List[int]) -> List[bool]:
         x = 0
+        result = [        ]
+        for bit in nums:
+            x = ((x << 1) + bit) % 5
+            result.append(x==0)
+        return result
+class SolutionV1:
+    def prefixesDivBy5(self, nums: List[int]) -> List[bool]:
+        x = 0
         result = []
         for bit in nums:
             x |= bit
