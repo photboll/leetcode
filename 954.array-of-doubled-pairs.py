@@ -3,6 +3,7 @@
 #
 # [954] Array of Doubled Pairs
 #
+from typing import *
 
 # @lc code=start
 from bisect import bisect_left
@@ -79,4 +80,9 @@ class Solution:
         
         
 # @lc code=end
-
+"""
+if __name__ == "__main__":
+    import local_testing
+    sol = Solution()
+    local_testing.run_tests("954aTest.txt", sol.canReorderDoubled)
+    """
