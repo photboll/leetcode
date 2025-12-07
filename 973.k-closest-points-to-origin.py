@@ -10,6 +10,9 @@ from heapq import heappush, heappop
 
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        return sorted(points, key= lambda x: x[0]**2 + x[1]**2)[:k]
+class SolutionV1:
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
 
         def dist(x1, y1, x2, y2):
             return sqrt((x2-x1)**2 + (y2-y1)**2)
