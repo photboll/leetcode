@@ -1,0 +1,24 @@
+#
+# @lc app=leetcode id=696 lang=python3
+#
+# [696] Count Binary Substrings
+#
+
+# @lc code=start
+class Solution:
+    def countBinarySubstrings(self, s: str) -> int:
+
+        groups = [1]
+        for i in range(1, len(s)):
+            if s[i-1] != s[i]:
+                groups.append(1)
+            else:
+                groups[-1] += 1
+            
+        res = 0
+        for i in range(1, len(groups)):
+            res += min(groups[i-1], groups[i])
+        return res
+        
+# @lc code=end
+
