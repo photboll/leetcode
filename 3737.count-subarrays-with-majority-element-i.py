@@ -5,7 +5,12 @@
 #
 
 # @lc code=start
-class Solution:
+class SolutionV1:
+    def countMajoritySubarrays(self, nums: List[int], target: int) -> int:
+        n = len(nums)
+
+        
+class SolutionV1:
     def countMajoritySubarrays(self, nums: List[int], target: int) -> int:
         n = len(nums)
         result = 0
