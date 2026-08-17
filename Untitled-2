@@ -1,0 +1,18 @@
+/interface bridge
+add name=bridge
+
+/interface wifi
+set [ find default-name=wifi1 ] \
+    configuration.mode=station-bridge \
+    configuration.country=Sweden \
+    configuration.ssid=PtP-Link \
+    security.authentication-types=wpa2-psk,wpa3-psk \
+    security.passphrase=Jumbo0-Encounter-Securely-Catchy\
+    disabled=no
+
+/interface bridge port
+add bridge=bridge interface=ether1
+add bridge=bridge interface=wifi1
+
+/ip dhcp-client
+add interface=bridge disabled=no
