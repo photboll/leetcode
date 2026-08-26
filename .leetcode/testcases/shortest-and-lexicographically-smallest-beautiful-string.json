@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "2904",
+  "titleSlug": "shortest-and-lexicographically-smallest-beautiful-string",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"100011001\"\n3",
+      "expectedOutput": "\"11001\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-26T16:06:18.138Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"1011\"\n2",
+      "expectedOutput": "\"11\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-26T16:06:18.138Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "\"000\"\n1",
+      "expectedOutput": "\"\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-26T16:06:18.138Z"
+    }
+  ]
+}

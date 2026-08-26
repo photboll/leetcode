@@ -1,4 +1,3 @@
-#
 # @lc app=leetcode id=2901 lang=python3
 #
 # [2901] Longest Unequal Adjacent Groups Subsequence II

@@ -1,0 +1,22 @@
+{
+  "questionFrontendId": "2975",
+  "titleSlug": "maximum-square-area-by-removing-fences-from-a-field",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "4\n3\n[2,3]\n[2]",
+      "expectedOutput": "4",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-26T18:33:07.783Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "6\n7\n[2]\n[4]",
+      "expectedOutput": "-1",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-26T18:33:07.783Z"
+    }
+  ]
+}

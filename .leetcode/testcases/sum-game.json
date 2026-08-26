@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "1927",
+  "titleSlug": "sum-game",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"5023\"",
+      "expectedOutput": "false",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-26T18:47:19.378Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"25??\"",
+      "expectedOutput": "true",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-26T18:47:19.378Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "\"?3295???\"",
+      "expectedOutput": "false",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-26T18:47:19.378Z"
+    }
+  ]
+}
