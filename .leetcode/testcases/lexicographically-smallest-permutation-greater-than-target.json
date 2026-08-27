@@ -1,0 +1,27 @@
+{
+  "questionFrontendId": "3720",
+  "titleSlug": "lexicographically-smallest-permutation-greater-than-target",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"abc\"\n\"bba\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-27T16:04:09.674Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"leet\"\n\"code\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-27T16:04:09.674Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "\"baba\"\n\"bbaa\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-27T16:04:09.674Z"
+    }
+  ]
+}

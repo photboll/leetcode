@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "2958",
+  "titleSlug": "length-of-longest-subarray-with-at-most-k-frequency",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[1,2,3,1,2,3,1,2]\n2",
+      "expectedOutput": "6",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-26T18:49:38.306Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[1,2,1,2,1,2,1,2]\n1",
+      "expectedOutput": "2",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-26T18:49:38.306Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[5,5,5,5,5,5,5]\n4",
+      "expectedOutput": "4",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-26T18:49:38.306Z"
+    }
+  ]
+}
