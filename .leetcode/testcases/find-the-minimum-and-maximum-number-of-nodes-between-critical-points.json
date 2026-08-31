@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "2058",
+  "titleSlug": "find-the-minimum-and-maximum-number-of-nodes-between-critical-points",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[3,1]",
+      "expectedOutput": "[-1,-1]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-31T14:55:01.876Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[5,3,1,2,5,1,2]",
+      "expectedOutput": "[1,3]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-31T14:55:01.876Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[1,3,2,2,3,2,2,2,7]",
+      "expectedOutput": "[3,3]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-08-31T14:55:01.876Z"
+    }
+  ]
+}
