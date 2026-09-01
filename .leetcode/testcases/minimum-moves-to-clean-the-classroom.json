@@ -1,0 +1,43 @@
+{
+  "questionFrontendId": "3568",
+  "titleSlug": "minimum-moves-to-clean-the-classroom",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[\"S.\", \"XL\"]\n2",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-01T18:53:48.203Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[\"LS\", \"RL\"]\n4",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-01T18:53:48.203Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[\"L.S\", \"RXL\"]\n3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-01T18:53:48.203Z"
+    },
+    {
+      "id": "failed-1788292162227",
+      "name": "🚨 Wrong Answer #1 (21:49)",
+      "input": "[\"S\", \"L\", \"R\", \"L\"]\n2",
+      "expectedOutput": "3",
+      "isFailedSubmission": true,
+      "createdAt": "2026-09-01T19:49:22.222Z"
+    },
+    {
+      "id": "failed-1788292282002",
+      "name": "🚨 Time Limit Exceeded #2 (21:51)",
+      "input": "[\"XRXXXRRXXL..RXX.RXR.\", \"XXR.RR.RR..XX.X.XXXX\", \"XXR..RX.XX.XRXXRXX.R\", \"L..XR...XXRRRX..X..X\", \"X.RXXXRX.XRR.XR..X.R\", \"RRX.RRX..XXXRR.RLRRR\", \".RX.RL.XR...RR..R.XR\", \"RRXXRR...RRXRRRXR..R\", \".R..X..RXXRRR..XRX..\", \"RX.....RRR.RXR..XLX.\", \"RRXXRLRR..XXRX.R...R\", \"R.XX.RXRX..XR.R..RRX\", \"X.XL.XXRXX......XR.R\", \".RXX.XRRRX.RX..XX.XX\", \"RX....RX.RRRRXR..RXX\", \"LR..XR......XRX....S\", \".XX.R.RXRRXX..RRXR..\", \"...RXRLXRXRRX..XRX.X\", \"RXRRR..RXXX..XX.RX.R\", \".R..XXL.RRX.X...XRXR\"]\n17",
+      "expectedOutput": "83",
+      "isFailedSubmission": true,
+      "createdAt": "2026-09-01T19:51:22.002Z"
+    }
+  ]
+}
