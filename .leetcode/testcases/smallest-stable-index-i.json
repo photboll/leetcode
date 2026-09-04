@@ -1,0 +1,35 @@
+{
+  "questionFrontendId": "3903",
+  "titleSlug": "smallest-stable-index-i",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[5,0,1,4]\n3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-04T16:35:16.576Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[3,2,1]\n1",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-04T16:35:16.576Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[0]\n0",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-04T16:35:16.576Z"
+    },
+    {
+      "id": "failed-1788540231159",
+      "name": "🚨 Wrong Answer #1 (18:43)",
+      "input": "[5,2,9,7,5,1,6]\n1",
+      "expectedOutput": "-1",
+      "isFailedSubmission": true,
+      "createdAt": "2026-09-04T16:43:51.133Z"
+    }
+  ]
+}

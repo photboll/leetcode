@@ -1,0 +1,20 @@
+{
+  "questionFrontendId": "3875",
+  "titleSlug": "construct-uniform-parity-array-i",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[2,3]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-02T14:51:32.960Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[4,6]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-02T14:51:32.960Z"
+    }
+  ]
+}
