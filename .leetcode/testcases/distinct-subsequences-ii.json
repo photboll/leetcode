@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "940",
+  "titleSlug": "distinct-subsequences-ii",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"abc\"",
+      "expectedOutput": "7",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-07T15:00:17.548Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"aba\"",
+      "expectedOutput": "6",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-07T15:00:17.548Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "\"aaa\"",
+      "expectedOutput": "3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-07T15:00:17.548Z"
+    }
+  ]
+}
