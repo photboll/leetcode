@@ -1,0 +1,20 @@
+{
+  "questionFrontendId": "3870",
+  "titleSlug": "count-commas-in-range",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "1002",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-08T07:39:17.263Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "998",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-08T07:39:17.263Z"
+    }
+  ]
+}
