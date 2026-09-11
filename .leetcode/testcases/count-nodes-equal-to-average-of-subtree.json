@@ -1,0 +1,22 @@
+{
+  "questionFrontendId": "2265",
+  "titleSlug": "count-nodes-equal-to-average-of-subtree",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[4,8,5,0,1,null,6]",
+      "expectedOutput": "5",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-10T15:02:56.870Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[1]",
+      "expectedOutput": "1",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-10T15:02:56.870Z"
+    }
+  ]
+}
