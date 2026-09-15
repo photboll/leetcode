@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "2472",
+  "titleSlug": "maximum-number-of-non-overlapping-palindrome-substrings",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"abaccdbbd\"\n3",
+      "expectedOutput": "2",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-15T18:36:27.043Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"adbcda\"\n2",
+      "expectedOutput": "0",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-15T18:36:27.043Z"
+    },
+    {
+      "id": "failed-1789499346894",
+      "name": "🚨 Wrong Answer #1 (21:09)",
+      "input": "\"fttfjofpnpfydwdwdnns\"\n2",
+      "expectedOutput": "4",
+      "isFailedSubmission": true,
+      "createdAt": "2026-09-15T19:09:06.868Z"
+    }
+  ]
+}
