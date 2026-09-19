@@ -1,0 +1,22 @@
+{
+  "questionFrontendId": "1520",
+  "titleSlug": "maximum-number-of-non-overlapping-substrings",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"adefaddaccc\"",
+      "expectedOutput": "[\"e\",\"f\",\"ccc\"]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-18T21:46:40.586Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"abbaccd\"",
+      "expectedOutput": "[\"d\",\"bb\",\"cc\"]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-18T21:46:40.586Z"
+    }
+  ]
+}

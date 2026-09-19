@@ -1,0 +1,38 @@
+{
+  "questionFrontendId": "1401",
+  "titleSlug": "circle-and-rectangle-overlapping",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "1\n0\n0\n1\n-1\n3\n1",
+      "expectedOutput": "true",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-19T08:09:13.593Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "1\n1\n1\n1\n-3\n2\n-1",
+      "expectedOutput": "false",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-19T08:09:13.593Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "1\n0\n0\n-1\n0\n0\n1",
+      "expectedOutput": "true",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-19T08:09:13.593Z"
+    },
+    {
+      "id": "failed-1789806178490",
+      "name": "🚨 Wrong Answer #1 (10:22)",
+      "input": "1\n1\n1\n-3\n-3\n3\n3",
+      "expectedOutput": "true",
+      "isFailedSubmission": true,
+      "createdAt": "2026-09-19T08:22:58.485Z"
+    }
+  ]
+}
