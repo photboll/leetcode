@@ -1,0 +1,27 @@
+{
+  "questionFrontendId": "3524",
+  "titleSlug": "find-x-value-of-array-i",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[1,2,3,4,5]\n3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-21T16:07:21.822Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[1,2,4,8,16,32]\n4",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-21T16:07:21.822Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[1,1,2,1,1]\n2",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-21T16:07:21.822Z"
+    }
+  ]
+}

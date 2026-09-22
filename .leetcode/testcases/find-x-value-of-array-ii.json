@@ -1,0 +1,27 @@
+{
+  "questionFrontendId": "3525",
+  "titleSlug": "find-x-value-of-array-ii",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[1,2,3,4,5]\n3\n[[2,2,0,2],[3,3,3,0],[0,1,0,1]]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-22T17:11:09.517Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[1,2,4,8,16,32]\n4\n[[0,2,0,2],[0,2,0,1]]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-22T17:11:09.517Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[1,1,2,1,1]\n2\n[[2,1,0,1]]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-22T17:11:09.517Z"
+    }
+  ]
+}
