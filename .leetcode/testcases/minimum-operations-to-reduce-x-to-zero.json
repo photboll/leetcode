@@ -1,0 +1,38 @@
+{
+  "questionFrontendId": "1658",
+  "titleSlug": "minimum-operations-to-reduce-x-to-zero",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[1,1,4,2,3]\n5",
+      "expectedOutput": "2",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-23T16:34:13.886Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[5,6,7,8,9]\n4",
+      "expectedOutput": "-1",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-23T16:34:13.886Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[3,2,20,1,1,3]\n10",
+      "expectedOutput": "5",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-23T16:34:13.886Z"
+    },
+    {
+      "id": "failed-1790182142726",
+      "name": "🚨 Runtime Error #1 (18:49)",
+      "input": "[1,1]\n3",
+      "expectedOutput": "-1",
+      "isFailedSubmission": true,
+      "createdAt": "2026-09-23T16:49:02.726Z"
+    }
+  ]
+}
