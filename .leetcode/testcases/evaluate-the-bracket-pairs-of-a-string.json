@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "1807",
+  "titleSlug": "evaluate-the-bracket-pairs-of-a-string",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"(name)is(age)yearsold\"\n[[\"name\",\"bob\"],[\"age\",\"two\"]]",
+      "expectedOutput": "\"bobistwoyearsold\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-26T09:53:33.872Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"hi(name)\"\n[[\"a\",\"b\"]]",
+      "expectedOutput": "\"hi?\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-26T09:53:33.872Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "\"(a)(a)(a)aaa\"\n[[\"a\",\"yes\"]]",
+      "expectedOutput": "\"yesyesyesaaa\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-26T09:53:33.872Z"
+    }
+  ]
+}
