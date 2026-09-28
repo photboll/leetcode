@@ -1,0 +1,27 @@
+{
+  "questionFrontendId": "1614",
+  "titleSlug": "maximum-nesting-depth-of-the-parentheses",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"(1+(2*3)+((8)/4))+1\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-28T15:04:22.831Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"(1)+((2))+(((3)))\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-28T15:04:22.831Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "\"()(())((()()))\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-28T15:04:22.831Z"
+    }
+  ]
+}
