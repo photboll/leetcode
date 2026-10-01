@@ -16,6 +16,8 @@ class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
 
+        #Nice comment
+
         for char in s:
             if char in O2C:
                 stack.append(char)
