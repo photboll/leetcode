@@ -1,0 +1,22 @@
+{
+  "questionFrontendId": "1111",
+  "titleSlug": "maximum-nesting-depth-of-two-valid-parentheses-strings",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"(()())\"",
+      "expectedOutput": "[0,1,1,1,1,0]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-30T15:17:25.240Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"()(())()\"",
+      "expectedOutput": "[0,0,0,1,1,0,1,1]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-09-30T15:17:25.240Z"
+    }
+  ]
+}

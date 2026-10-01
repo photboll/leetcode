@@ -1,0 +1,41 @@
+{
+  "questionFrontendId": "20",
+  "titleSlug": "valid-parentheses",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"()\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-01T15:44:59.155Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"()[]{}\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-01T15:44:59.155Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "\"(]\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-01T15:44:59.155Z"
+    },
+    {
+      "id": "example-4",
+      "name": "Example 4",
+      "input": "\"([])\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-01T15:44:59.155Z"
+    },
+    {
+      "id": "example-5",
+      "name": "Example 5",
+      "input": "\"([)]\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-01T15:44:59.155Z"
+    }
+  ]
+}
