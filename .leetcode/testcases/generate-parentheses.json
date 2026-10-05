@@ -1,0 +1,22 @@
+{
+  "questionFrontendId": "22",
+  "titleSlug": "generate-parentheses",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "3",
+      "expectedOutput": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-02T14:47:40.637Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "1",
+      "expectedOutput": "[\"()\"]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-02T14:47:40.637Z"
+    }
+  ]
+}
