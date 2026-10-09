@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "921",
+  "titleSlug": "minimum-add-to-make-parentheses-valid",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"())\"",
+      "expectedOutput": "1",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-06T15:30:00.439Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"(((\"",
+      "expectedOutput": "3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-06T15:30:00.439Z"
+    },
+    {
+      "id": "failed-1791300764519",
+      "name": "🚨 Wrong Answer #1 (17:32)",
+      "input": "\"()))((\"",
+      "expectedOutput": "4",
+      "isFailedSubmission": true,
+      "createdAt": "2026-10-06T15:32:44.519Z"
+    }
+  ]
+}

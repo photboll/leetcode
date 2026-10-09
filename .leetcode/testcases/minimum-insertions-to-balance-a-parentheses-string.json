@@ -1,0 +1,38 @@
+{
+  "questionFrontendId": "1541",
+  "titleSlug": "minimum-insertions-to-balance-a-parentheses-string",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"(()))\"",
+      "expectedOutput": "1",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-09T21:55:40.088Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"())\"",
+      "expectedOutput": "0",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-09T21:55:40.088Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "\"))())(\"",
+      "expectedOutput": "3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-09T21:55:40.088Z"
+    },
+    {
+      "id": "failed-1791583663697",
+      "name": "🚨 Wrong Answer #1 (00:07)",
+      "input": "\")))))))\"",
+      "expectedOutput": "5",
+      "isFailedSubmission": true,
+      "createdAt": "2026-10-09T22:07:43.697Z"
+    }
+  ]
+}
