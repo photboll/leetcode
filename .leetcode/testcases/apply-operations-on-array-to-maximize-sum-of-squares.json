@@ -1,0 +1,22 @@
+{
+  "questionFrontendId": "2897",
+  "titleSlug": "apply-operations-on-array-to-maximize-sum-of-squares",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[2,6,5,8]\n2",
+      "expectedOutput": "261",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-12T06:58:00.937Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[4,5,4,7]\n3",
+      "expectedOutput": "90",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-12T06:58:00.937Z"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "2333",
+  "titleSlug": "minimum-sum-of-squared-difference",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[1,2,3,4]\n[2,10,20,19]\n0\n0",
+      "expectedOutput": "579",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-10T07:17:20.044Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[1,4,10,12]\n[5,8,6,9]\n1\n1",
+      "expectedOutput": "43",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-10T07:17:20.044Z"
+    },
+    {
+      "id": "failed-1791617757637",
+      "name": "🚨 Runtime Error #1 (09:35)",
+      "input": "[1,4,10,12]\n[5,8,6,9]\n10\n5",
+      "expectedOutput": "0",
+      "isFailedSubmission": true,
+      "createdAt": "2026-10-10T07:35:57.636Z"
+    }
+  ]
+}

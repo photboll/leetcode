@@ -15,7 +15,8 @@ class Solution:
         the AND OR operation described wil preserve the number of set bits in the output
         
         since we can use the operation any number of times we can redistribute the number of set 
-        bits across all 
+        bits across k numbers to maximize the sum of squares. 
+        
         """
         
         count = [0] * MAX_BITS
