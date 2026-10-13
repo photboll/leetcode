@@ -20,9 +20,6 @@ class Solution:
         """
         nums = [v*v for v in nums]
         nums.sort(reverse=True)
-        print(nums)
-
-        n = len(nums)
 
         # bias mid so that odd length arrays asigns the middle element to the first half
         mid = (len(nums) + 1) // 2
