@@ -1,0 +1,27 @@
+{
+  "questionFrontendId": "3551",
+  "titleSlug": "minimum-swaps-to-sort-by-digit-sum",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[37,100]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-17T22:20:15.315Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[22,14,33,7]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-17T22:20:15.315Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[18,43,34,16]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-17T22:20:15.315Z"
+    }
+  ]
+}
