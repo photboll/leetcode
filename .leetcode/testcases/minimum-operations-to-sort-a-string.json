@@ -1,0 +1,27 @@
+{
+  "questionFrontendId": "3863",
+  "titleSlug": "minimum-operations-to-sort-a-string",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"dog\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-21T17:10:21.886Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"card\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-21T17:10:21.886Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "\"gf\"",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-21T17:10:21.886Z"
+    }
+  ]
+}
