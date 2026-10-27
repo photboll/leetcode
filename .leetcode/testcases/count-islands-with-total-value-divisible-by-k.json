@@ -1,0 +1,20 @@
+{
+  "questionFrontendId": "3619",
+  "titleSlug": "count-islands-with-total-value-divisible-by-k",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[[0,2,1,0,0],[0,5,0,0,5],[0,0,1,0,0],[0,1,4,7,0],[0,2,0,0,8]]\n5",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-26T16:10:45.985Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[[3,0,3,0],[0,3,0,3],[3,0,3,0]]\n3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-26T16:10:45.985Z"
+    }
+  ]
+}

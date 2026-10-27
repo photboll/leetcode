@@ -1,0 +1,27 @@
+{
+  "questionFrontendId": "3963",
+  "titleSlug": "create-grid-with-exactly-one-path",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "2\n3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-27T16:16:18.469Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "3\n3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-27T16:16:18.469Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "1\n4",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-27T16:16:18.469Z"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "questionFrontendId": "2409",
+  "titleSlug": "count-days-spent-together",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"08-15\"\n\"08-18\"\n\"08-16\"\n\"08-19\"",
+      "expectedOutput": "3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-24T08:38:34.610Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"10-01\"\n\"10-31\"\n\"11-01\"\n\"12-31\"",
+      "expectedOutput": "0",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-24T08:38:34.610Z"
+    }
+  ]
+}
