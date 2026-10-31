@@ -22,8 +22,8 @@ class Solution:
             result += int(date[-2:]) -1
             return result 
         
-        #print(date2days(arriveAlice))
-        #print(date2days(leaveAlice))
+        print(date2days(arriveAlice))
+        print(date2days(leaveAlice))
 
         start = max(arriveAlice, arriveBob)
         end = min(leaveAlice, leaveBob)
@@ -38,3 +38,21 @@ class Solution:
 
 # @lc code=end
 
+if __name__ == "__main__":
+    li = ["a", "b", "c", "d", "e", "f", "g"]
+
+    print("Original list:", li)
+    print("Indices:       ", list(range(len(li))))
+    print()
+
+    print(f"{li=}")
+    print(f"{li[2:]=}")
+    print(f"{li[2:5]=}")
+    print(f"{li[::2]=}")
+    print(f"{li[1::2]=}")
+    print(f"{li[:3]=}")
+    print(f"{li[-3:]=}")
+    print(f"{li[:-1]=}")
+    print(f"{li[::-1]=}")
+    print(f"{li[:]=}")
+    print(f"{li[1:6:2]=}")

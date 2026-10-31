@@ -1,0 +1,20 @@
+{
+  "questionFrontendId": "3841",
+  "titleSlug": "palindromic-path-queries-in-a-tree",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "3\n[[0,1],[1,2]]\n\"aac\"\n[\"query 0 2\",\"update 1 b\",\"query 0 2\"]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-29T17:07:29.042Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "4\n[[0,1],[0,2],[0,3]]\n\"abca\"\n[\"query 1 2\",\"update 0 b\",\"query 2 3\",\"update 3 a\",\"query 1 3\"]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-29T17:07:29.042Z"
+    }
+  ]
+}

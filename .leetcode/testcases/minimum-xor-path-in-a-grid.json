@@ -1,0 +1,27 @@
+{
+  "questionFrontendId": "3882",
+  "titleSlug": "minimum-xor-path-in-a-grid",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[[1,2],[3,4]]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-28T16:18:17.282Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[[6,7],[5,8]]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-28T16:18:17.282Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[[2,7,5]]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-10-28T16:18:17.282Z"
+    }
+  ]
+}
