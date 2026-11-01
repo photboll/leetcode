@@ -1,0 +1,22 @@
+{
+  "questionFrontendId": "453",
+  "titleSlug": "minimum-moves-to-equal-array-elements",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[1,2,3]",
+      "expectedOutput": "3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-01T07:15:13.192Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[1,1,1]",
+      "expectedOutput": "0",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-01T07:15:13.192Z"
+    }
+  ]
+}
