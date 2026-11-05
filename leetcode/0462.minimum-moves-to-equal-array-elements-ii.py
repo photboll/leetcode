@@ -45,6 +45,7 @@ def median(nums):
     b = quickselect(nums, n//2)
 
     return (a + b) /2
+
 class Solution:
     def minMoves2(self, nums: list[int]) -> int:
         #can it be off by one dpending on rounding. yes it will be off 

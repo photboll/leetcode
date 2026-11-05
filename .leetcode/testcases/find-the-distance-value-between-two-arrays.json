@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "1385",
+  "titleSlug": "find-the-distance-value-between-two-arrays",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[4,5,8]\n[10,9,1,8]\n2",
+      "expectedOutput": "2",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-05T17:26:46.876Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[1,4,2,3]\n[-4,-3,6,10,20,30]\n3",
+      "expectedOutput": "2",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-05T17:26:46.876Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[2,1,100,3]\n[-5,-2,10,-3,7]\n6",
+      "expectedOutput": "1",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-05T17:26:46.876Z"
+    }
+  ]
+}

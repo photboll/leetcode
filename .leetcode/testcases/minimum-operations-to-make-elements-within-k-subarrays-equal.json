@@ -1,0 +1,20 @@
+{
+  "questionFrontendId": "3505",
+  "titleSlug": "minimum-operations-to-make-elements-within-k-subarrays-equal",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[5,-2,1,3,7,3,6,4,-1]\n3\n2",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-04T11:20:26.335Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[9,-2,-2,-2,1,5]\n2\n2",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-04T11:20:26.335Z"
+    }
+  ]
+}
