@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "1606",
+  "titleSlug": "find-servers-that-handled-most-number-of-requests",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "3\n[1,2,3,4,5]\n[5,2,3,3,3]",
+      "expectedOutput": "[1]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-09T18:22:36.222Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "3\n[1,2,3,4]\n[1,2,1,2]",
+      "expectedOutput": "[0]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-09T18:22:36.222Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "3\n[1,2,3]\n[10,12,11]",
+      "expectedOutput": "[0,1,2]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-09T18:22:36.222Z"
+    }
+  ]
+}

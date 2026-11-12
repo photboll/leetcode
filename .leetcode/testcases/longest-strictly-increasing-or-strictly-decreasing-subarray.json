@@ -1,0 +1,27 @@
+{
+  "questionFrontendId": "3105",
+  "titleSlug": "longest-strictly-increasing-or-strictly-decreasing-subarray",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[1,4,3,3,2]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-12T16:57:58.797Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[3,3,3,3]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-12T16:57:58.797Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[3,2,1]",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-12T16:57:58.797Z"
+    }
+  ]
+}

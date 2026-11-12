@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "1267",
+  "titleSlug": "count-servers-that-communicate",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[[1,0],[0,1]]",
+      "expectedOutput": "0",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-08T08:09:35.109Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[[1,0],[1,1]]",
+      "expectedOutput": "3",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-08T08:09:35.109Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "[[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]]",
+      "expectedOutput": "4",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-08T08:09:35.109Z"
+    }
+  ]
+}
