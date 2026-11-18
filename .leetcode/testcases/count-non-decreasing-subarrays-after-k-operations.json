@@ -1,0 +1,20 @@
+{
+  "questionFrontendId": "3420",
+  "titleSlug": "count-non-decreasing-subarrays-after-k-operations",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "[6,3,1,2,4,4]\n7",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-14T07:51:20.279Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "[6,3,1,3,6]\n4",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-14T07:51:20.280Z"
+    }
+  ]
+}

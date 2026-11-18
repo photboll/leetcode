@@ -1,0 +1,30 @@
+{
+  "questionFrontendId": "2914",
+  "titleSlug": "minimum-number-of-changes-to-make-binary-string-beautiful",
+  "testcases": [
+    {
+      "id": "example-1",
+      "name": "Example 1",
+      "input": "\"1001\"",
+      "expectedOutput": "2",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-18T16:57:52.475Z"
+    },
+    {
+      "id": "example-2",
+      "name": "Example 2",
+      "input": "\"10\"",
+      "expectedOutput": "1",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-18T16:57:52.475Z"
+    },
+    {
+      "id": "example-3",
+      "name": "Example 3",
+      "input": "\"0000\"",
+      "expectedOutput": "0",
+      "isFailedSubmission": false,
+      "createdAt": "2026-11-18T16:57:52.475Z"
+    }
+  ]
+}
